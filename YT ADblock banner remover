@@ -1,0 +1,15 @@
+(function() {
+    'use strict';
+    var player = document.getElementById("movie_player");
+    var closeit = setInterval(function() {
+        if(document.getElementsByClassName("style-scope ytd-popup-container").length > 0 && document.getElementById("dismiss-button"))
+        {
+            setTimeout(function(){
+                document.getElementById("dismiss-button").click();
+                document.getElementsByClassName("ytp-play-button ytp-button")[0].click();
+                console.log("banner closed");
+                clearInterval(closeit);
+            },5959);
+        }
+    }, 100);
+})();
